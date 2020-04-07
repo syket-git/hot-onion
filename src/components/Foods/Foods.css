@@ -1,0 +1,18 @@
+.clear-fix{
+    clear: right;
+}
+.card{
+    border:none;
+}
+.card:hover{
+    box-shadow: 0px 0px 14px #e8dede;
+    border-radius: 15px;
+    transition: .5s;
+}
+.link{
+    color:black;
+}
+.link:hover{
+    text-decoration: none;
+    color:black;
+}

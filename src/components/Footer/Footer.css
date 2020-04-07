@@ -1,0 +1,37 @@
+.footer{
+    background-color:#343A40;
+    color: white;
+    
+}
+
+.logo{
+    width: 250px;
+    height: auto;
+}
+.footer ul{
+    list-style: none;;
+}
+.footer ul a li{
+    color: white;
+    margin-bottom: 5px;
+}
+.footer ul a:hover{
+    text-decoration:none;
+}
+.footer ul a li:hover{
+    color: #ff3465;
+    transition: .5s;
+}
+.copy{
+    font-size: 15px;
+    color: gray;
+}
+
+.top-footer a{
+    color:white;
+}
+.top-footer a:hover{
+    color: #ff3465;
+    text-decoration:none;
+    transition: .5s;
+}

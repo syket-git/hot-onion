@@ -1,0 +1,30 @@
+.input input{
+    width: 407px;
+    height: 46px;
+    margin-bottom: 16px;
+    border: none;
+    background: #f0f0f0;
+}
+.input .button{
+    width: 407px;
+    height: 46px;
+    margin-bottom: 16px;
+    border: none;
+    background: #FF3465;
+    border-radius: 5px;
+    color: white;
+}
+
+.input input:focus{
+    border:1px solid gray;
+    background: #f0f0f0;
+}
+
+.top-logo{
+    width: 260px;
+    height: auto;
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 80px;
+}

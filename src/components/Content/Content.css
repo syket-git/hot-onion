@@ -1,0 +1,15 @@
+.time{
+    margin-right: 30px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.food-items{
+    margin: 0 auto;
+}
+
+.active{
+    color: #ff3465;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 3px solid #ff3465;
+}
