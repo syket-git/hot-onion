@@ -7,7 +7,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/DWPH942/lunch1.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$25'
+	price:'33.78'
 },
 
 {
@@ -17,7 +17,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/YdRkZQv/lunch2.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$25.77'
+	price:'25.77'
 },
 
 {
@@ -27,7 +27,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/YT6x8cd/lunch3.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$30.50'
+	price:'30.50'
 },
 
 
@@ -38,7 +38,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/tYMkKjs/lunch4.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$18.99'
+	price:'18.99'
 },
 
 
@@ -49,7 +49,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/9W35DzL/lunch5.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$32.52'
+	price:'32.52'
 },
 
 {
@@ -59,7 +59,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/rpQmJHM/lunch6.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$28.99'
+	price:'28.99'
 },
 
 
@@ -70,7 +70,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/NVh0BLr/breakfast1.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$9.50'
+	price:'9.50'
 },
 
 
@@ -81,7 +81,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/CbZwxB2/breakfast2.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$18.00'
+	price:'18.00'
 },
 
 
@@ -92,7 +92,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/vLryKsw/breakfast3.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$39'
+	price:'39'
 },
 
 {
@@ -102,7 +102,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/FmFtz9G/breakfast4.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$8.00'
+	price:'8.00'
 },
 
 
@@ -113,7 +113,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/nLx71qq/breakfast5.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$12.00'
+	price:'12.00'
 },
 
 
@@ -124,7 +124,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/dDdsfZL/breakfast6.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$14.00'
+	price:'14.00'
 },
 
 
@@ -136,7 +136,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/sb311dC/dinner1.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$39.70'
+	price:'39.70'
 },
 
 {
@@ -146,7 +146,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/VgctbTW/dinner2.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$32.88'
+	price:'32.88'
 },
 
 {
@@ -156,7 +156,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/5Bg4F2c/dinner3.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$22.89'
+	price:'22.89'
 },
 
 {
@@ -166,7 +166,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/Hz2cBzz/dinner4.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$14.90'
+	price:'14.90'
 },
 
 {
@@ -176,7 +176,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/gg2dh2w/dinner5.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$14.00'
+	price:'14.00'
 },
 
 {
@@ -186,7 +186,7 @@ const fakeData = [
 	img: 'https://i.ibb.co/yQkgG5S/dinner6.png',
 	shortDescription: 'A Healthy Meal can make energetic you',
 	longDescription: 'Food is any substance[1] consumed to provide nutritional support for an organism. Food is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.',
-	price:'$24.79'
+	price:'24.79'
 }
 
 

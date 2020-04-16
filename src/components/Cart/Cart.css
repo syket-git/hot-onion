@@ -1,0 +1,21 @@
+.problem-top{
+    margin-top: 100px;
+}
+.red{
+    color:red;
+}
+.width{
+    width: 80%;
+    
+}
+.background{
+   margin-bottom: 10px;
+    border-radius: 4px;
+}
+.button2{
+    background:white;
+    cursor:text !important;
+}
+.mar{
+    margin:0;
+}

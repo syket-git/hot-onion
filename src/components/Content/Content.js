@@ -5,9 +5,10 @@ import fakeData from '../../fakeData';
 import { useState } from 'react';
 import Foods from '../Foods/Foods';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
-const Content = () => {
+const Content = (props) => {
 
     
     const[Food, setFood] = useState(fakeData);
@@ -74,7 +75,12 @@ const Content = () => {
                 }
             </div>
             <div className="text-center">
-                <button disabled  className="btn btn-danger">Check out your cart</button>
+               {
+                   props.cart.length >= 1 ? 
+                   <Link to="/cart"><button  className="btn btn-danger">Check out your cart</button></Link>
+                   :
+                   <button disabled  className="btn btn-secondary">Check out your cart</button>
+               }
             </div>
         </div>
     );

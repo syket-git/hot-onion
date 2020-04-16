@@ -23,7 +23,7 @@ const Foods = (props) => {
                         <p>
                         {shortDescription}
                         </p>
-                        <h4>{price}</h4>
+                        <h4>${price}</h4>
                         
                         </Card.Text>
                     </Card.Body>
