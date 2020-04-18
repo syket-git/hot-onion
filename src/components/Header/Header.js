@@ -28,8 +28,9 @@ const Header = (props) => {
                                         fontSize: '15px',
                                         padding: '7px',
                                         marginTop: '6px',
-                                        marginLeft: '10px'
-                                    }} variant="primary">{auth.user.displayName}</Badge>{' '}
+                                        marginLeft: '10px',
+                                        marginRight:'15px'
+                                    }} variant="secondary">{auth.user.displayName}</Badge>{' '}
 
                                 </span>
                                 :
@@ -37,7 +38,7 @@ const Header = (props) => {
                         }
                         {
                             auth.user ?
-                                <span style={{ marginRight: '20px' }} onClick={auth.signOut} className="signup login">Sign out</span>
+                                <span style={{ marginRight: '20px', cursor:'pointer' }} onClick={auth.signOut} className="signup login">Sign out</span>
 
                                 :
 

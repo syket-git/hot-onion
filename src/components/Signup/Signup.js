@@ -43,83 +43,57 @@ const Login = () => {
                         <div className="input mt-5">
                             {
                                 returningUser ?
-
-                                    <form onSubmit={handleSubmit(onSubmit)}>
-
+                                    <form onSubmit={handleSubmit(onSubmit)} className="py-5">
                                         {
-                                            auth.user != null && <p style={{ width: '400px' }} className="text-center text-danger">{auth.user.error}</p>
+                                            auth.user != null && <p className="text-danger">* {auth.user.error}</p>
                                         }
                                         <div className="form-group">
-                                            <input name="email" className="form-control" ref={register({
-                                                required: true, pattern: {
-                                                    message: 'Email is required'
-                                                }
-                                            })} placeholder="Email" />
-                                            {errors.email && <p className="text-danger font-weight-bold font-italic">{errors.email.message}</p>}
+                                            <input name="email" className="form-control" ref={register({ required: true })} placeholder="Email" />
+                                            {errors.email && <span className="error red">Email is required</span>}
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="password" name="password" className="form-control" ref={register({ required: true })} placeholder="Password" />
+                                            {errors.password && <span className="error red">Password is required</span>}
                                         </div>
 
-                                        <input type="password" name="password" className="form-control" placeholder="Password"
-
-                                            ref={register({
-                                                required: "You must specify a password",
-                                                minLength: {
-                                                    value: 6,
-                                                    message: "Password must have at least 8 characters"
-                                                }
-                                            })}
-                                        />
-
-                                        {errors.password && <p className="text-danger font-weight-bold font-italic">{errors.password.message}</p>}
-                                        <button type="submit" className="button"> Sign in</button>
-                                        <p style={{ cursor: 'pointer' }} onClick={() => setReturningUser(false)} class="red text-center">Don't Have an account?</p>
+                                        <div className="form-group">
+                                            <button className="btn btn-danger btn-block" type="submit">Sign In</button>
+                                        </div>
+                                        <div className="option text-center">
+                                            <label style={{color:'red', cursor:'pointer'}} onClick={() => setReturningUser(false)}>Don't have an account?</label>
+                                        </div>
                                     </form>
-
                                     :
-
-                                    <form onSubmit={handleSubmit(onSubmit)}>
-
+                                    <form onSubmit={handleSubmit(onSubmit)} className="py-5">
                                         {
-                                            auth.user != null && <p style={{ width: '400px' }} className="text-center text-danger">{auth.user.error}</p>
+                                            auth.user != null && <p className="text-danger">* {auth.user.error}</p>
                                         }
-
-                                        <input type="text" className="form-control" name="name" placeholder="Name"
-                                            ref={register({ required: true, maxLength: 20 })}
-                                        />
-                                        {errors.name && <p className="text-danger font-weight-bold font-italic">Name is required</p>}
-
-                                        <input type="email" name="email" className="form-control" placeholder="Email"
-                                            ref={register({
-                                                required: 'Email is required',
-                                                pattern: {
-                                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                                    message: "invalid email address"
-                                                }
-                                            })} />
-
-                                        {errors.email && <p className="text-danger font-weight-bold font-italic">{errors.email.message}</p>}
-
-                                        <input type="password" name="password" className="form-control" placeholder="Password"
-
-                                            ref={register({
-                                                required: "You must specify a password",
-                                                minLength: {
-                                                    value: 6,
-                                                    message: "Password must have at least 8 characters"
-                                                }
-                                            })}
-                                        />
-
-                                        {errors.password && <p className="text-danger font-weight-bold font-italic">{errors.password.message}</p>}
-
-                                        <input type="password" name="confirm_password" className="form-control" ref={register({
-                                            validate: (value) => value === watch('password')
-                                        })} placeholder="Confirm Password" />
-
-
-                                        {errors.confirm_password && <p className="text-danger font-weight-bold font-italic">{errors.confirm_password.message}</p>}
-                                        <button className="button" type="submit">Create an account</button>
-                                        <p style={{ cursor: 'pointer' }} onClick={() => setReturningUser(true)} className="red text-center">Already Have an account?</p>
+                                        <div className="form-group">
+                                            <input name="name" className="form-control" ref={register({ required: true })} placeholder="Name" />
+                                            {errors.name && <span className="error red">Name is required</span>}
+                                        </div>
+                                        <div className="form-group">
+                                            <input name="email" className="form-control" ref={register({ required: true })} placeholder="Email" />
+                                            {errors.email && <span className="error red">Email is required</span>}
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="password" name="password" className="form-control" ref={register({ required: true })} placeholder="Password" />
+                                            {errors.password && <span className="error red">Password is required</span>}
+                                        </div>
+                                        <div className="form-group">
+                                            <input type="password" name="confirm_password" className="form-control" ref={register({
+                                                validate: (value) => value === watch('password')
+                                            })} placeholder="Confirm Password" />
+                                            {errors.confirm_password && <span className="error red">Passwords didn't match.</span>}
+                                        </div>
+                                        <div className="form-group">
+                                            <button className="btn btn-danger btn-block" type="submit">Sign Up</button>
+                                        </div>
+                                        <div className="option text-center">
+                                            <label style={{color:'red', cursor:'pointer'}} onClick={() => setReturningUser(true)}>Already Have an Account?</label>
+                                        </div>
                                     </form>
+
                             }
                         </div>
                     </div>
