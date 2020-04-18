@@ -24,3 +24,9 @@
     font-weight: 600;
 
 }
+.login:hover{
+    text-decoration: none;
+}
+.signup:hover{
+    text-decoration: none;
+}

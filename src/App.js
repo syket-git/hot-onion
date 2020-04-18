@@ -12,10 +12,11 @@ import {
   Route
 } from "react-router-dom";
 import Error from './components/Error/Error';
-import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
 import SingleFood from './components/SingleFood/SingleFood';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import { PrivateRoute, AuthProvider } from './components/useAuth/useAuth';
 
 
 
@@ -64,47 +65,47 @@ function App() {
     setCart(filteredCart)
   }
 
-  console.log(cart);
-
 
 
   return (
     <div className="App">
     
-     <Router>
-       <Switch>
-         <Route exact path="/">
-          <Header cart={cart}></Header>
-          <Banner></Banner>
-          <Content cart={cart}></Content>
-          <ChooseUs></ChooseUs>
-          <Footer></Footer>
-         </Route>
-         <Route path="/login">
-            <Login></Login>
-         </Route>
-         <Route path="/food/:id">
-            <Header cart={cart}></Header>
-            <SingleFood cartHandler={cartHandler}></SingleFood>
-            <Footer></Footer>
-         </Route>
-         <Route path="/checkout">
-           <Header cart={cart}></Header>
-           <Checkout></Checkout>
-           <Footer></Footer>
-         </Route>
-         <Route path="/cart">
-            <Header cart={cart}></Header>
-            <Cart deliveryDetails={deliveryDetails} deliveryDetailsHandler ={deliveryDetailsHandler} checkOutItemHandler={checkOutItemHandler} clearCart={clearCart} cart={cart}></Cart>
-            <Footer></Footer>
-         </Route>
-         <Route path="*">
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
             <Header cart={cart}></Header>
             <Banner></Banner>
-            <Error></Error>
-         </Route>
-       </Switch>
-     </Router>
+            <Content cart={cart}></Content>
+            <ChooseUs></ChooseUs>
+            <Footer></Footer>
+          </Route>
+          <Route path="/login">
+              <Signup></Signup>
+          </Route>
+          <Route path="/food/:id">
+              <Header cart={cart}></Header>
+              <SingleFood cartHandler={cartHandler}></SingleFood>
+              <Footer></Footer>
+          </Route>
+          <PrivateRoute path="/checkout">
+            <Header cart={cart}></Header>
+            <Checkout></Checkout>
+            <Footer></Footer>
+          </PrivateRoute>
+          <PrivateRoute path="/cart">
+              <Header cart={cart}></Header>
+              <Cart deliveryDetails={deliveryDetails} deliveryDetailsHandler ={deliveryDetailsHandler} checkOutItemHandler={checkOutItemHandler} clearCart={clearCart} cart={cart}></Cart>
+              <Footer></Footer>
+          </PrivateRoute>
+          <Route path="*">
+              <Header cart={cart}></Header>
+              <Banner></Banner>
+              <Error></Error>
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
 
     
       

@@ -7,23 +7,21 @@ import Foods from '../Foods/Foods';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 const Content = (props) => {
 
-    
-    const[Food, setFood] = useState(fakeData);
+    const [Food] = useState(fakeData);
     const [currentFood, setCurrentFood] = useState([]);
 
     useEffect(() => {
         const FindingFood = Food.filter(fd => fd.category === 'lunch');
         setCurrentFood();
         setCurrentFood(FindingFood);
-        console.log(currentFood);
+        //console.log(currentFood);
         document.getElementById('breakfast').classList.remove('active');
         document.getElementById('lunch').classList.add('active');
         document.getElementById('dinner').classList.remove('active');
-    }, [])
-    
+    }, [Food])
+
     const handleBreakfast = () => {
         const FindingFood = Food.filter(fd => fd.category === 'breakfast');
         setCurrentFood();
@@ -46,9 +44,6 @@ const Content = (props) => {
 
     }
 
-    
-
-
     const handleDinner = () => {
         const FindingFood = Food.filter(fd => fd.category === 'dinner');
         setCurrentFood();
@@ -59,10 +54,9 @@ const Content = (props) => {
         document.getElementById('lunch').classList.remove('active');
         document.getElementById('dinner').classList.add('active');
     }
-    
 
-   
-       return (
+
+    return (
         <div>
             <div className="text-center my-5">
                 <span id="breakfast" onClick={handleBreakfast} className="time">Breakfast</span>
@@ -71,16 +65,20 @@ const Content = (props) => {
             </div>
             <div className=" container food-items row justify-content-center">
                 {
-                    currentFood.map(food => <Foods food = {food}></Foods>)
+                    currentFood.map(food =>
+
+                        <Foods
+                            id={food.id}
+                            food={food}></Foods>)
                 }
             </div>
             <div className="text-center">
-               {
-                   props.cart.length >= 1 ? 
-                   <Link to="/cart"><button  className="btn btn-danger">Check out your cart</button></Link>
-                   :
-                   <button disabled  className="btn btn-secondary">Check out your cart</button>
-               }
+                {
+                    props.cart.length >= 1 ?
+                        <Link to="/cart"><button className="btn btn-danger">Check out your cart</button></Link>
+                        :
+                        <button disabled className="btn btn-secondary">Check out your cart</button>
+                }
             </div>
         </div>
     );
