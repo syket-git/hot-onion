@@ -17,6 +17,7 @@ import SingleFood from './components/SingleFood/SingleFood';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import { PrivateRoute, AuthProvider } from './components/useAuth/useAuth';
+import Inventory from './components/Inventory';
 
 
 
@@ -87,6 +88,9 @@ function App() {
               <Header cart={cart}></Header>
               <SingleFood cartHandler={cartHandler}></SingleFood>
               <Footer></Footer>
+          </Route>
+          <Route path="/inventory">
+              <Inventory></Inventory>
           </Route>
           <PrivateRoute path="/checkout">
             <Header cart={cart}></Header>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './Content.css';
-import fakeData from '../../fakeData';
 import { useState } from 'react';
 import Foods from '../Foods/Foods';
 import { useEffect } from 'react';
@@ -9,12 +8,22 @@ import { Link } from 'react-router-dom';
 
 const Content = (props) => {
 
-    const [Food] = useState(fakeData);
+    const [Food, setFoods] = useState([]);
     const [currentFood, setCurrentFood] = useState([]);
 
     useEffect(() => {
+        fetch('http://localhost:4200/foods')
+        .then(res => res.json())
+        .then(data => {
+            setFoods(data)
+        })
+    },[])
+
+    
+
+    useEffect(() => {
         const FindingFood = Food.filter(fd => fd.category === 'lunch');
-        setCurrentFood();
+        
         setCurrentFood(FindingFood);
         //console.log(currentFood);
         document.getElementById('breakfast').classList.remove('active');
@@ -24,9 +33,9 @@ const Content = (props) => {
 
     const handleBreakfast = () => {
         const FindingFood = Food.filter(fd => fd.category === 'breakfast');
-        setCurrentFood();
+        
         setCurrentFood(FindingFood);
-        console.log(currentFood);
+        //console.log(currentFood);
         document.getElementById('breakfast').classList.add('active');
         document.getElementById('lunch').classList.remove('active');
         document.getElementById('dinner').classList.remove('active');
@@ -35,7 +44,7 @@ const Content = (props) => {
     const handleLunch = () => {
 
         const FindingFood = Food.filter(fd => fd.category === 'lunch');
-        setCurrentFood();
+        
         setCurrentFood(FindingFood);
         console.log(currentFood);
         document.getElementById('breakfast').classList.remove('active');
@@ -48,7 +57,7 @@ const Content = (props) => {
         const FindingFood = Food.filter(fd => fd.category === 'dinner');
         setCurrentFood();
         setCurrentFood(FindingFood);
-        console.log(currentFood);
+        //console.log(currentFood);
 
         document.getElementById('breakfast').classList.remove('active');
         document.getElementById('lunch').classList.remove('active');

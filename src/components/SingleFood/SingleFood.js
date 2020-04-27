@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './SingleFood.css';
-import fakeData from '../../fakeData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
@@ -12,10 +11,19 @@ const SingleFood = (props) => {
     const { id } = useParams();
 
     useEffect(() => {
-        const FoodDetails = fakeData.find(fd => fd.id === parseInt(id));
-        setCurrentFood(FoodDetails);
+        fetch('http://localhost:4200/Food/' + id)
+        .then(res => res.json())
+        .then(data => {
+            setCurrentFood(data);
+        })
+    },[id])
 
-    }, [id])
+
+    // useEffect(() => {
+    //     const FoodDetails = item.find(fd => fd.id === parseInt(id));
+    //     setCurrentFood(FoodDetails);
+
+    // }, [item, id])
 
     const handleAddedFood = (currentFood) => {
         currentFood.quantity = quantity;
@@ -60,7 +68,7 @@ const SingleFood = (props) => {
             </div>
 
         </div>
-    );
-};
+    )
+}
 
 export default SingleFood;
