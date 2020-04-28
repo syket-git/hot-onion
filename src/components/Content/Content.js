@@ -12,7 +12,7 @@ const Content = (props) => {
     const [currentFood, setCurrentFood] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4200/foods')
+        fetch('https://enigmatic-bastion-85242.herokuapp.com/foods')
         .then(res => res.json())
         .then(data => {
             setFoods(data)
@@ -25,7 +25,7 @@ const Content = (props) => {
         const FindingFood = Food.filter(fd => fd.category === 'lunch');
         
         setCurrentFood(FindingFood);
-        //console.log(currentFood);
+        
         document.getElementById('breakfast').classList.remove('active');
         document.getElementById('lunch').classList.add('active');
         document.getElementById('dinner').classList.remove('active');
@@ -35,7 +35,7 @@ const Content = (props) => {
         const FindingFood = Food.filter(fd => fd.category === 'breakfast');
         
         setCurrentFood(FindingFood);
-        //console.log(currentFood);
+        
         document.getElementById('breakfast').classList.add('active');
         document.getElementById('lunch').classList.remove('active');
         document.getElementById('dinner').classList.remove('active');
@@ -46,7 +46,7 @@ const Content = (props) => {
         const FindingFood = Food.filter(fd => fd.category === 'lunch');
         
         setCurrentFood(FindingFood);
-        console.log(currentFood);
+        
         document.getElementById('breakfast').classList.remove('active');
         document.getElementById('lunch').classList.add('active');
         document.getElementById('dinner').classList.remove('active');
@@ -57,7 +57,7 @@ const Content = (props) => {
         const FindingFood = Food.filter(fd => fd.category === 'dinner');
         setCurrentFood();
         setCurrentFood(FindingFood);
-        //console.log(currentFood);
+        
 
         document.getElementById('breakfast').classList.remove('active');
         document.getElementById('lunch').classList.remove('active');

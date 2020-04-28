@@ -13,8 +13,7 @@ const Checkout = () => {
                     </div>
                     <div className="col-md-4 bg-light p-3 offset-1">
                         <img style={{ width: '130px', height: 'auto', marginBottom: '20px', display: 'block', justifyContent: 'center' }} src="https://i.ibb.co/pvxGxrM/Group-1151.png" alt="" />
-                        <h5>Order Id: </h5>
-                        <Badge variant="success">5894525</Badge>{' '}
+                        
                         <h5>Shop Address: </h5>
                         <p><strong>Grand Mughal Restaurant</strong></p>
                         <h2>09:00</h2>

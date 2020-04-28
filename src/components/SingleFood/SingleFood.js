@@ -11,7 +11,7 @@ const SingleFood = (props) => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch('http://localhost:4200/Food/' + id)
+        fetch('https://enigmatic-bastion-85242.herokuapp.com/Food/' + id)
         .then(res => res.json())
         .then(data => {
             setCurrentFood(data);

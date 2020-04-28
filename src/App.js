@@ -26,13 +26,10 @@ function App() {
 
 
   const[cart, setCart] = useState([]);
-  const [deliveryDetails, setDeliveryDetails] = useState({
-    door: null, road: null, flat: null, business: null, address: null
-  });
 
-  const deliveryDetailsHandler = (data) => {
-    setDeliveryDetails(data)
-  }
+
+ 
+  
 
   const cartHandler = (data) => {
     const alreadyAdded = cart.find(crt => crt.id === data.id);
@@ -99,7 +96,7 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/cart">
               <Header cart={cart}></Header>
-              <Cart deliveryDetails={deliveryDetails} deliveryDetailsHandler ={deliveryDetailsHandler} checkOutItemHandler={checkOutItemHandler} clearCart={clearCart} cart={cart}></Cart>
+              <Cart checkOutItemHandler={checkOutItemHandler} clearCart={clearCart} cart={cart}></Cart>
               <Footer></Footer>
           </PrivateRoute>
           <Route path="*">

@@ -12,7 +12,7 @@ const Login = () => {
     const auth = useAuth();
     const onSubmit = data => {
         if (returningUser) {
-            console.log(data)
+            
             if (data.email && data.password) {
                 auth.signIn(data.email, data.password);
             }
@@ -21,7 +21,7 @@ const Login = () => {
                 auth.signUp(data.name, data.email, data.password)
             }
         }
-        console.log(data);
+        
         reset();
     }
 
@@ -45,7 +45,7 @@ const Login = () => {
                                 returningUser ?
                                     <form onSubmit={handleSubmit(onSubmit)} className="py-5">
                                         {
-                                            auth.user != null && <p className="text-danger">* {auth.user.error}</p>
+                                            auth.user != null && <p style={{width:'400px'}} className="text-danger">* {auth.user.error}</p>
                                         }
                                         <div className="form-group">
                                             <input name="email" className="form-control" ref={register({ required: true })} placeholder="Email" />
@@ -66,7 +66,7 @@ const Login = () => {
                                     :
                                     <form onSubmit={handleSubmit(onSubmit)} className="py-5">
                                         {
-                                            auth.user != null && <p className="text-danger">* {auth.user.error}</p>
+                                            auth.user != null && <p style={{width:'400px'}} className="text-danger">* {auth.user.error}</p>
                                         }
                                         <div className="form-group">
                                             <input name="name" className="form-control" ref={register({ required: true })} placeholder="Name" />
